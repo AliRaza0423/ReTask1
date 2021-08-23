@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:retask_1/doted_stepbar.dart';
 import 'package:retask_1/signin_scaffold.dart';
 
 class Experience_Pg5 extends StatefulWidget {
@@ -21,14 +22,22 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
               IconButton(
                   icon: Icon(Icons.arrow_back),
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Signin_scaffold()));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Signin_scaffold()));
                   }),
-              Text('Experience', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),),
+              Text(
+                'Experience',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 18),
+              ),
               SizedBox(
                 width: 25,
               )
             ],
           ),
+          Doted_stepbar(2),
           TextFormField(
               decoration: InputDecoration(
                   hintText: 'Title',
@@ -37,8 +46,7 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -93,8 +101,7 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -112,8 +119,7 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),

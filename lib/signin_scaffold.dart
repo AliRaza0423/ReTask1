@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:retask_1/doted_stepbar.dart';
 
 import 'Pg4_personalinfo.dart';
 import 'Pg5_experience.dart';
@@ -10,29 +11,21 @@ class Signin_scaffold extends StatefulWidget {
 }
 
 class _Signin_scaffoldState extends State<Signin_scaffold> {
-  int _counter = 0;
+  int _counter = 1;
   Map<int, Widget> _map = {
-    0: Personalinfo_Pg4(),
-    1: Experience_Pg5(),
-    2: Education_Pg6(),
+    1: Personalinfo_Pg4(),
+    2: Experience_Pg5(),
+    3: Education_Pg6(),
   };
-  List<String> _title = [
-    'Personal Information',
-    'Experience',
-    'Education',
-  ];
-  // List<Widget> _list = [Personalinfo_Pg4(), Experience_Pg5(), Education_Pg6()];
+  // List<String> _title = [
+  //   'Personal Information',
+  //   'Experience',
+  //   'Education',
+  // ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   centerTitle: true,
-      //   title: Text(_title[_counter]),
-      //   elevation: 0,
-      //   backgroundColor: Colors.transparent,
-      // ),
       body: Container(
-        // padding: EdgeInsets.all(30),
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/image/background.png'),
@@ -54,7 +47,9 @@ class _Signin_scaffoldState extends State<Signin_scaffold> {
             //     )
             //   ],
             // ),
+
             _map[_counter],
+            // Doted_stepbar(),
 //------------------------Buttons------------------------
             TextButton(
                 onPressed: () {},

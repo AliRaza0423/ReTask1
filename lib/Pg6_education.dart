@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:retask_1/doted_stepbar.dart';
 
 import 'signin_scaffold.dart';
 
@@ -34,6 +35,7 @@ class _Education_Pg6State extends State<Education_Pg6> {
               )
             ],
           ),
+          Doted_stepbar(3),
           TextFormField(
               decoration: InputDecoration(
                   hintText: 'School',
@@ -42,8 +44,7 @@ class _Education_Pg6State extends State<Education_Pg6> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -61,8 +62,7 @@ class _Education_Pg6State extends State<Education_Pg6> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -80,8 +80,7 @@ class _Education_Pg6State extends State<Education_Pg6> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -160,8 +159,7 @@ class _Education_Pg6State extends State<Education_Pg6> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),

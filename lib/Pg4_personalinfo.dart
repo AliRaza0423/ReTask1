@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:retask_1/doted_stepbar.dart';
 
 class Personalinfo_Pg4 extends StatefulWidget {
   @override
@@ -24,16 +25,21 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
           //         onPressed: () {
           //           Navigator.of(context).pop();
           //         }),
-              Text('Personal Information', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),),
-              // SizedBox(
-              //   width: 25,
-              // ),
-          //   ],
+
+          Text(
+            'Personal Information',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),
+          ),
+          Doted_stepbar(1),
+          // SizedBox(
+          //   width: 25,
+          // ),
+          // ],
           // ),
           Stack(children: [
             ClipRRect(
-              child: Image(
-                  image: AssetImage('assets/image/user-image.png')),
+              child: Image(image: AssetImage('assets/image/user-image.png')),
             ),
             Positioned(
                 bottom: 0,
@@ -72,8 +78,7 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -91,8 +96,7 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -110,8 +114,7 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide:
-                        BorderSide(color: Colors.transparent, width: 0),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0),
                   ),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -129,8 +132,7 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide:
-                      BorderSide(color: Colors.transparent, width: 0),
+                  borderSide: BorderSide(color: Colors.transparent, width: 0),
                 ),
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -224,8 +226,7 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
             margin: EdgeInsets.symmetric(vertical: 10),
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.white),
+                borderRadius: BorderRadius.circular(10), color: Colors.white),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
