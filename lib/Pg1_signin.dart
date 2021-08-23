@@ -43,18 +43,19 @@ class Signin_Pg1 extends StatelessWidget {
                         borderSide: BorderSide(
                           color: Colors.transparent,
                         ))),
-               validator: (value) {
-          final pattern = (r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
-          final regExp = RegExp(pattern);
+                validator: (value) {
+                  final pattern =
+                      (r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
+                  final regExp = RegExp(pattern);
 
-          if (value.contains(' ')) {
-            return 'can not have blank spaces';
-          } else if (!regExp.hasMatch(value)) {
-            return 'Enter a valid email';
-          } else {
-            return null;
-          }
-        },
+                  if (value.contains(' ')) {
+                    return 'can not have blank spaces';
+                  } else if (!regExp.hasMatch(value)) {
+                    return 'Enter a valid email';
+                  } else {
+                    return null;
+                  }
+                },
               ),
               SizedBox(
                 height: 20,

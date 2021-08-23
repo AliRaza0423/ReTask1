@@ -32,12 +32,13 @@ class _Signin_scaffoldState extends State<Signin_scaffold> {
       //   backgroundColor: Colors.transparent,
       // ),
       body: Container(
-        padding: EdgeInsets.only(top: 10),
+        // padding: EdgeInsets.all(30),
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/image/background.png'),
                 fit: BoxFit.cover)),
         child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
           children: [
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
