@@ -11,7 +11,6 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      autovalidateMode: AutovalidateMode.onUserInteraction,
       child: Column(
         children: [
           // SizedBox(
@@ -25,18 +24,15 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
           //         onPressed: () {
           //           Navigator.of(context).pop();
           //         }),
-
+//---------------------------title----------------------
           Text(
             'Personal Information',
             style: TextStyle(
                 fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),
           ),
+//--------------------------Doted stepbar---------------
           Doted_stepbar(1),
-          // SizedBox(
-          //   width: 25,
-          // ),
-          // ],
-          // ),
+//-------------------------Profile pic------------------
           Stack(children: [
             ClipRRect(
               child: Image(image: AssetImage('assets/image/user-image.png')),
@@ -71,56 +67,99 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
           ),
 //  -------------------------textfields-------------------------
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Your Name',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
+            decoration: InputDecoration(
+                hintText: 'Your Name',
+                hintStyle: TextStyle(color: Colors.grey),
+                filled: true,
+                fillColor: Colors.white,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.transparent, width: 0),
+                ),
+                enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                    ))),
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            validator: (value) {
+              final pattern = ('[a-zA-Z]+([\s][a-zA-Z]+)*');
+              final regExp = RegExp(pattern);
+              if (value.isEmpty) {
+                return null;
+              } else if (!regExp.hasMatch(value)) {
+                return 'Enter only Alphabets';
+              } else {
+                return null;
+              }
+            },
+          ),
           SizedBox(
             height: 10,
           ),
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Father Name',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
+            decoration: InputDecoration(
+                hintText: 'Father Name',
+                hintStyle: TextStyle(color: Colors.grey),
+                filled: true,
+                fillColor: Colors.white,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.transparent, width: 0),
+                ),
+                enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                    ))),
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            validator: (value) {
+              final pattern = ('[a-zA-Z]+([\s][a-zA-Z]+)*');
+              final regExp = RegExp(pattern);
+              if (value.isEmpty) {
+                return null;
+              } else if (!regExp.hasMatch(value)) {
+                return 'Enter only Alphabets';
+              } else {
+                return null;
+              }
+            },
+          ),
           SizedBox(
             height: 10,
           ),
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Email',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
+            decoration: InputDecoration(
+                hintText: 'Email',
+                hintStyle: TextStyle(color: Colors.grey),
+                filled: true,
+                fillColor: Colors.white,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.transparent, width: 0),
+                ),
+                enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                    ))),
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            validator: (value) {
+              final pattern =
+                  (r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
+              final regExp = RegExp(pattern);
+
+              if (value.isEmpty) {
+                return null;
+              } else if (value.contains(' ')) {
+                return 'can not have blank spaces';
+              } else if (!regExp.hasMatch(value)) {
+                return 'Enter a valid email';
+              } else {
+                return null;
+              }
+            },
+          ),
           SizedBox(
             height: 10,
           ),
@@ -142,7 +181,9 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
             keyboardType: TextInputType.number,
             validator: (value) {
               final regExp = RegExp('[0-9]');
-              if (!regExp.hasMatch(value)) {
+              if (value.isEmpty) {
+                return null;
+              } else if (!regExp.hasMatch(value)) {
                 return 'Enter only number';
               } else {
                 return null;
