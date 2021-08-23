@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class Doted_stepbar extends StatelessWidget {
@@ -29,12 +31,14 @@ class Doted_stepbar extends StatelessWidget {
                 for (var step in steps)
                   //-------------Container for customize into Dot-------------//
 
-                  Icon(
-                    step <= counter
-                        ? Icons.fiber_manual_record
-                        : Icons.fiber_manual_record_outlined,
-                    color: Colors.red[800],
-                    size: 15,
+                  Container(
+                    width: 15,
+                    height: 15,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.red[800], width: 2),
+                        color:
+                            step <= counter ? Colors.red[800] : Colors.white,
+                        borderRadius: BorderRadius.circular(100)),
                   ),
               ],
             ),

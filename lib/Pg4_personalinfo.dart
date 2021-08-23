@@ -13,9 +13,9 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
     return Form(
       child: Column(
         children: [
-          // SizedBox(
-          //   height: 60,
-          // ),
+          SizedBox(
+            height: 10,
+          ),
           // Row(
           //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
           //   children: [
@@ -40,18 +40,18 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
             Positioned(
                 bottom: 0,
                 right: 0,
-                child: Container(
+                child: Image(
+                  image: AssetImage('assets/image/Vector.png'),
                   width: 30,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.red[800],
-                  ),
-                  child: Icon(
-                    Icons.edit,
-                    size: 25,
-                    color: Colors.white,
-                  ),
+                  fit: BoxFit.cover,
+                )),
+            Positioned(
+                bottom: 3,
+                right: 3,
+                child: Icon(
+                  Icons.edit_outlined,
+                  size: 22,
+                  color: Colors.white,
                 )),
           ]),
           Text(
