@@ -4,6 +4,7 @@ import 'package:retask_1/BirthdayCard.dart';
 import 'package:retask_1/EventCard.dart';
 import 'package:retask_1/LeaveCard.dart';
 import 'package:retask_1/LinearProgressBar.dart';
+import 'package:retask_1/Pg19_HomePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         // primarySwatch: Colors.blue,
       ),
       // home: Signin_Pg1(),
-      home: LinearBar('today'),
+      home: Pg19_HomePage(),
     );
   }
 }
