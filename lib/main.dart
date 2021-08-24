@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:retask_1/Pg1_signin.dart';
+import 'package:retask_1/AnnouncementCard.dart';
+import 'package:retask_1/BirthdayCard.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         // primarySwatch: Colors.blue,
       ),
-      home: Signin_Pg1(),
+      // home: Signin_Pg1(),
+      home: BirthdayCard(),
     );
   }
 }
