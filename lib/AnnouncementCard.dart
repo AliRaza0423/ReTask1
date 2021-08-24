@@ -15,6 +15,7 @@ class AnnouncementCard extends StatelessWidget {
       ),
       //-----------------text in card-----------------
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(

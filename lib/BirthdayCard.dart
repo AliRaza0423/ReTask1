@@ -17,32 +17,46 @@ class BirthdayCard extends StatelessWidget {
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          //-----------leading image of card--------------------
-          CircleAvatar(
-            radius: 40,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(100),
-              child: Image.asset("assets/image/bil.jpg"),
-            ),
-          ),
-          SizedBox(
-            width: 20,
-          ),
-          //-----------text in card-------------------
-          Column(
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Hamza Ali'),
-              Text('20 May 2020'),
-              Text(
-                '3 day',
-                style: TextStyle(color: Colors.red[800]),
+              //-----------leading image of card--------------------
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset("assets/image/user1.png"),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              //-----------text in card-------------------
+              Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                 
+                  Text('Hamza Ali'),
+                   SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.date_range_outlined, size: 18,),
+                      Text('20 May 2020'),
+                    ],
+                  ),
+                   SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    '3 day',
+                    style: TextStyle(color: Colors.red[800]),
+                  ),
+                ],
               ),
             ],
-          ),
-          SizedBox(
-            width: 80,
           ),
           //-----------traling celebration icon--------------
           IconButton(
