@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:retask_1/AnnouncementCard.dart';
 import 'package:retask_1/BirthdayCard.dart';
+import 'package:retask_1/EventCard.dart';
 import 'package:retask_1/LeaveCard.dart';
+import 'package:retask_1/LinearProgressBar.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         // primarySwatch: Colors.blue,
       ),
       // home: Signin_Pg1(),
-      home: LeaveCard('Sick Leave', '20 anual leaves pending'),
+      home: EventCard(),
     );
   }
 }
