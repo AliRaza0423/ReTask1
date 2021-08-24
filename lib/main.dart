@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         // primarySwatch: Colors.blue,
       ),
       // home: Signin_Pg1(),
-      home: EventCard(),
+      home: LinearBar('today'),
     );
   }
 }
