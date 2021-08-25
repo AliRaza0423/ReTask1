@@ -41,12 +41,17 @@ class AnnouncementCard extends StatelessWidget {
             ),
           ),
           SizedBox(height: 50),
-          Text(
-            '14:01 20/10/2020',
-            style: TextStyle(
-              fontSize: 10,
-              color: Colors.grey,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                '14:01 20/10/2020',
+                style: TextStyle(
+                  fontSize: 10,
+                  color: Colors.grey,
+                ),
+              ),
+            ],
           ),
         ],
       ),

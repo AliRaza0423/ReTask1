@@ -14,7 +14,8 @@ class EventCard extends StatelessWidget {
         // );
       },
       child: Container(
-        // clipBehavior: Clip.antiAlias,
+        width: MediaQuery.of(context).size.width * 0.9,
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10), color: Colors.white),
         child: Column(

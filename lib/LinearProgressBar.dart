@@ -8,11 +8,13 @@ class LinearBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.white,
         padding: EdgeInsets.all(20),
+        margin: EdgeInsets.all(10),
         width: MediaQuery.of(context).size.width * 0.9,
-        // height: 400,
-
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.white,
+        ),
 //.....................Text above Linear bar.................................
 
         child: Column(
@@ -28,7 +30,7 @@ class LinearBar extends StatelessWidget {
               height: 15,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'Absents',
@@ -42,7 +44,7 @@ class LinearBar extends StatelessWidget {
               height: 10,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('12',
                     style: TextStyle(

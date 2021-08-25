@@ -7,7 +7,7 @@ class BirthdayCard extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,
       // height: 140,
-      margin: EdgeInsets.all(20),
+      margin: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
       padding: EdgeInsets.symmetric(vertical: 20, horizontal: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
