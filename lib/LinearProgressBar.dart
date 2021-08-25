@@ -8,7 +8,7 @@ class LinearBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         margin: EdgeInsets.all(10),
         width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
@@ -61,41 +61,43 @@ class LinearBar extends StatelessWidget {
               height: 25,
             ),
 //----------------------------Bar----------------------------------//
-            Stack(
-              children: [
-                LinearPercentIndicator(
-                  // width: 300,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  lineHeight: 12,
-                  percent: 0.2,
-                  backgroundColor: Colors.grey[200],
-                  progressColor: Colors.blue[300],
-                ),
-                LinearPercentIndicator(
-                  // width: 300,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  lineHeight: 12,
-                  percent: 0.9,
-                  backgroundColor: Colors.transparent,
-                  progressColor: Colors.red[700],
-                ),
-                LinearPercentIndicator(
-                  // width: 300,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  lineHeight: 12,
-                  percent: 0.7,
-                  backgroundColor: Colors.transparent,
-                  progressColor: Colors.green[400],
-                ),
-                LinearPercentIndicator(
-                  // width: 300,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  lineHeight: 12,
-                  percent: 0.2,
-                  backgroundColor: Colors.transparent,
-                  progressColor: Colors.blue[300],
-                ),
-              ],
+            FittedBox(
+              child: Stack(
+                children: [
+                  LinearPercentIndicator(
+                    // width: 300,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    lineHeight: 12,
+                    percent: 0.2,
+                    backgroundColor: Colors.grey[200],
+                    progressColor: Colors.blue[300],
+                  ),
+                  LinearPercentIndicator(
+                    // width: 300,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    lineHeight: 12,
+                    percent: 0.9,
+                    backgroundColor: Colors.transparent,
+                    progressColor: Colors.red[700],
+                  ),
+                  LinearPercentIndicator(
+                    // width: 300,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    lineHeight: 12,
+                    percent: 0.7,
+                    backgroundColor: Colors.transparent,
+                    progressColor: Colors.green[400],
+                  ),
+                  LinearPercentIndicator(
+                    // width: 300,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    lineHeight: 12,
+                    percent: 0.2,
+                    backgroundColor: Colors.transparent,
+                    progressColor: Colors.blue[300],
+                  ),
+                ],
+              ),
             ),
           ],
         ));

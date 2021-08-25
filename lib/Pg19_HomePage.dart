@@ -6,6 +6,11 @@ import 'package:retask_1/LeaveCard.dart';
 import 'package:retask_1/LinearProgressBar.dart';
 
 class Pg19_HomePage extends StatelessWidget {
+  List<LeaveCard> L_list = [
+    LeaveCard('Anual Leave', '20 anual leaves pending'),
+    LeaveCard('Casual Leave', '20 anual leaves pending'),
+    LeaveCard('Sick Leave', '20 anual leaves pending')
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,12 +153,12 @@ class Pg19_HomePage extends StatelessWidget {
                 Container(
                   height: 230,
                   child: ListView.builder(
-                      // padding: EdgeInsets.symmetric(horizontal: 8),
-                      // scrollDirection: Axis.horizontal,
-                      physics: NeverScrollableScrollPhysics(),
-                      itemCount: 3,
-                      itemBuilder: (context, index) =>
-                          LeaveCard('hey', 'helo')),
+                    // padding: EdgeInsets.symmetric(horizontal: 8),
+                    // scrollDirection: Axis.horizontal,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemCount: 3,
+                    itemBuilder: (context, index) => L_list[index],
+                  ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -185,9 +190,6 @@ class Pg19_HomePage extends StatelessWidget {
             ),
           ),
           Container(margin: EdgeInsets.all(10), child: LinearBar('Today')),
-
-
-
           ListTile(
             leading: Image(
               image: AssetImage('assets/image/ic.jpg'),
@@ -210,10 +212,7 @@ class Pg19_HomePage extends StatelessWidget {
                 itemCount: 2,
                 itemBuilder: (context, index) => EventCard()),
           ),
-
-
-
-           ListTile(
+          ListTile(
             leading: Image(
               image: AssetImage('assets/image/ic.jpg'),
               height: 30,
@@ -241,8 +240,7 @@ class Pg19_HomePage extends StatelessWidget {
                   // scrollDirection: Axis.horizontal,
                   physics: NeverScrollableScrollPhysics(),
                   itemCount: 3,
-                  itemBuilder: (context, index) =>
-                      LeaveCard('hey', 'helo')),
+                  itemBuilder: (context, index) => LeaveCard('hey', 'helo')),
             ),
           ),
         ],
