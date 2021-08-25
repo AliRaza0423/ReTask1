@@ -25,7 +25,7 @@ class Pg19_HomePage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: MediaQuery.of(context).size.height * 0.25,
+                  top: MediaQuery.of(context).size.height * 0.24,
                   left: 0,
                   right: 0,
                   child: Container(
