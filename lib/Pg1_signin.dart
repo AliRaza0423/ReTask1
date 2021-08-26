@@ -148,28 +148,19 @@ class Signin_Pg1 extends StatelessWidget {
                     margin: EdgeInsets.all(5),
                     height: 60,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      // color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(color: Colors.red,width: 1)
                     ),
-                    child: SignInButton(
-                      Buttons.Google,
-                      onPressed: null,
-                      text: 'Log in with Google',
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('assets/image/google-icon.jpg',width: 30,),
+                          Text('  Log in with Google',style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
+                      ],
+                    ),
                   ),
                 )
-                // SizedBox(
-                //   height: 60,
-                //   child: SignInButton(
-                //     Buttons.Google,
-                //     text: 'log in with Google',
-                //     onPressed: () {
-                //       Navigator.of(context).push(MaterialPageRoute(
-                //           builder: (context) => Navigationbar()));
-                //     },
-                //   ),
-                // ),
               ],
             ),
           ),

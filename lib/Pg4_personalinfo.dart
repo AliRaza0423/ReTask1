@@ -96,7 +96,7 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
               if (value.isEmpty) {
                 return null;
               } else if (!regExp.hasMatch(value)) {
-                return 'Enter only Alphabets';
+                return 'Enter a Valid Name';
               } else {
                 return null;
               }
@@ -129,7 +129,7 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
               if (value.isEmpty) {
                 return null;
               } else if (!regExp.hasMatch(value)) {
-                return 'Enter only Alphabets';
+                return 'Enter a Valid Name';
               } else {
                 return null;
               }

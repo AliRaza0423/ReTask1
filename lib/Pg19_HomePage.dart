@@ -197,8 +197,8 @@ class Pg19_HomePage extends StatelessWidget {
 //-------------------Announcement Card-------------------------
           ListTile(
             leading: Image(
-              image: AssetImage('assets/image/ic.jpg'),
-              height: 30,
+              image: AssetImage('assets/image/orange.png'),
+              height: 50,
             ),
             title: Text('Announcements'),
             trailing: TextButton(
@@ -221,8 +221,8 @@ class Pg19_HomePage extends StatelessWidget {
 //-----------------Birthday Card-----------------
           ListTile(
             leading: Image(
-              image: AssetImage('assets/image/ic.jpg'),
-              height: 30,
+              image: AssetImage('assets/image/lightgreen.png'),
+              height: 50,
             ),
             title: Text('Birthday'),
             trailing: TextButton(
@@ -243,8 +243,8 @@ class Pg19_HomePage extends StatelessWidget {
 //-----------------Leave Card-----------------------
           ListTile(
             leading: Image(
-              image: AssetImage('assets/image/ic.jpg'),
-              height: 30,
+              image: AssetImage('assets/image/orange.png'),
+              height: 50,
             ),
             title: Text('Leave Management'),
             trailing: TextButton(
@@ -291,8 +291,8 @@ class Pg19_HomePage extends StatelessWidget {
 //-----------------Linear Progress bar---------------------
           ListTile(
             leading: Image(
-              image: AssetImage('assets/image/ic.jpg'),
-              height: 30,
+              image: AssetImage('assets/image/green.png'),
+              height: 50,
             ),
             title: Text('Team Member'),
             trailing: TextButton(
@@ -310,8 +310,8 @@ class Pg19_HomePage extends StatelessWidget {
 //---------------------Events Card---------------------
           ListTile(
             leading: Image(
-              image: AssetImage('assets/image/ic.jpg'),
-              height: 30,
+              image: AssetImage('assets/image/blue.png'),
+              height: 50,
             ),
             title: Text('Events'),
             trailing: TextButton(
@@ -334,8 +334,8 @@ class Pg19_HomePage extends StatelessWidget {
 //----------------------Upcomming Holidays-----------------------
           ListTile(
             leading: Image(
-              image: AssetImage('assets/image/ic.jpg'),
-              height: 30,
+              image: AssetImage('assets/image/lightblue.png'),
+              height: 50,
             ),
             title: Text('Upcoming Holiday'),
             trailing: TextButton(

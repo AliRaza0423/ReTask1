@@ -13,7 +13,7 @@ class LeaveCard extends StatelessWidget {
         leading: CircleAvatar(
           radius: 40,
           backgroundColor: Colors.red[50],
-          backgroundImage: AssetImage('assets/image/chain.png'),
+          backgroundImage: AssetImage('assets/image/round.png'),
         ),
         title: Text(text),
         subtitle: Text(
