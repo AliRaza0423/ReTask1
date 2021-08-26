@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'Pg1_signin.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
+     SystemChrome.setEnabledSystemUIOverlays ([]);
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.white,
-        accentColor: Colors.red
+        accentColor: Colors.red,
+        
         // primarySwatch: Colors.blue,
       ),
       home: Signin_Pg1(),

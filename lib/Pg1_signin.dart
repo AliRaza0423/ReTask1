@@ -150,13 +150,13 @@ class Signin_Pg1 extends StatelessWidget {
                     decoration: BoxDecoration(
                       // color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.red,width: 1)
+                      border: Border.all(color: Color(0xffbf2634),width: 1)
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset('assets/image/google-icon.jpg',width: 30,),
-                          Text('  Log in with Google',style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
+                          Text('  Log in with Google',style: TextStyle(color: Color(0xffbf2634), fontWeight: FontWeight.bold),),
                       ],
                     ),
                   ),

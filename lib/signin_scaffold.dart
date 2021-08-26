@@ -4,6 +4,7 @@ import 'package:retask_1/Pg19_HomePage.dart';
 import 'Pg4_personalinfo.dart';
 import 'Pg5_experience.dart';
 import 'Pg6_education.dart';
+// import 'package:flutter/services.dart';
 
 class Signin_scaffold extends StatefulWidget {
   @override
@@ -22,6 +23,12 @@ class _Signin_scaffoldState extends State<Signin_scaffold> {
   //   'Experience',
   //   'Education',
   // ];
+
+  @override
+  void initState() {
+    // SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
