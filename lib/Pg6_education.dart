@@ -18,11 +18,12 @@ class _Education_Pg6State extends State<Education_Pg6> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButton(
-                  icon: Icon(Icons.arrow_back),
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Signin_scaffold()));
-                  }),
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Signin_scaffold()));
+                },
+              ),
               Text(
                 'Education',
                 style: TextStyle(
@@ -32,61 +33,72 @@ class _Education_Pg6State extends State<Education_Pg6> {
               ),
               SizedBox(
                 width: 25,
-              )
+              ),
             ],
           ),
+          SizedBox(height: 15,),
           Doted_stepbar(3),
+          SizedBox(height: 15,),
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'School',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+            decoration: InputDecoration(
+              hintText: 'School',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
           SizedBox(
             height: 10,
           ),
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Degree',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+            decoration: InputDecoration(
+              hintText: 'Degree',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
           SizedBox(
             height: 10,
           ),
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Field of study',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+            decoration: InputDecoration(
+              hintText: 'Field of study',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
           SizedBox(
             height: 10,
           ),
@@ -106,14 +118,15 @@ class _Education_Pg6State extends State<Education_Pg6> {
                     children: [
                       Text('Start Date'),
                       IconButton(
-                          icon: Icon(Icons.today),
-                          onPressed: () {
-                            showDatePicker(
-                                context: context,
-                                initialDate: DateTime(2005),
-                                firstDate: DateTime(2000),
-                                lastDate: DateTime.now());
-                          })
+                        icon: Icon(Icons.today),
+                        onPressed: () {
+                          showDatePicker(
+                              context: context,
+                              initialDate: DateTime(2005),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now());
+                        },
+                      )
                     ],
                   ),
                 ),
@@ -134,14 +147,15 @@ class _Education_Pg6State extends State<Education_Pg6> {
                     children: [
                       Text('End Date'),
                       IconButton(
-                          icon: Icon(Icons.today),
-                          onPressed: () {
-                            showDatePicker(
-                                context: context,
-                                initialDate: DateTime(2005),
-                                firstDate: DateTime(2000),
-                                lastDate: DateTime.now());
-                          })
+                        icon: Icon(Icons.today),
+                        onPressed: () {
+                          showDatePicker(
+                              context: context,
+                              initialDate: DateTime(2005),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now());
+                        },
+                      )
                     ],
                   ),
                 ),
@@ -152,37 +166,42 @@ class _Education_Pg6State extends State<Education_Pg6> {
             height: 10,
           ),
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Degree',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+            decoration: InputDecoration(
+              hintText: 'Degree',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
           SizedBox(
             height: 10,
           ),
           TextFormField(
             maxLines: 5,
             decoration: InputDecoration(
-                hintText: 'Discription',
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent)),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                    ))),
+              hintText: 'Discription',
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.transparent)),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
           ),
 //------------------------Buttons------------------------
           // TextButton(
@@ -190,7 +209,7 @@ class _Education_Pg6State extends State<Education_Pg6> {
           //     child: Text(
           //       'Skip',
           //       style: TextStyle(color: Colors.red[800]),
-          //     )),
+          //     ),),
           // FractionallySizedBox(
           //   widthFactor: 1,
           //   child: ElevatedButton(
@@ -207,7 +226,7 @@ class _Education_Pg6State extends State<Education_Pg6> {
           //         if (counter < 4) {
           //           setState(() {
           //             counter += 1;
-          //           });
+          //           },);
           //         } else {
           //           // Navigator.of(context).push(MaterialPageRoute(
           //           //     builder: (context) => Experience_Pg5()));
@@ -216,7 +235,7 @@ class _Education_Pg6State extends State<Education_Pg6> {
           //       child: Text(
           //         'Next',
           //         style: TextStyle(color: Colors.white),
-          //       )),
+          //       ),),
           // ),
         ],
       ),

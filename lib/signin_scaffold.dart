@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:retask_1/doted_stepbar.dart';
-
+import 'package:retask_1/Navigationbar.dart';
+import 'package:retask_1/Pg19_HomePage.dart';
 import 'Pg4_personalinfo.dart';
 import 'Pg5_experience.dart';
 import 'Pg6_education.dart';
@@ -29,7 +29,7 @@ class _Signin_scaffoldState extends State<Signin_scaffold> {
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/image/background.png'),
-                fit: BoxFit.cover)),
+                fit: BoxFit.fill)),
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
           children: [
@@ -52,38 +52,45 @@ class _Signin_scaffoldState extends State<Signin_scaffold> {
             // Doted_stepbar(),
 //------------------------Buttons------------------------
             TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Skip',
-                  style: TextStyle(color: Colors.red[800]),
-                )),
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => Navigationbar()));
+              },
+              child: Text(
+                'Skip',
+                style: TextStyle(color: Colors.red[800]),
+              ),
+            ),
             FractionallySizedBox(
               widthFactor: 0.85,
               child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.red[800],
-                    // minimumSize: Size(100, 40),
-                    padding: EdgeInsets.symmetric(
-                      vertical: 15,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.red[800],
+                  // minimumSize: Size(100, 40),
+                  padding: EdgeInsets.symmetric(
+                    vertical: 15,
                   ),
-                  onPressed: () {
-                    if (_counter < 4) {
-                      setState(() {
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                onPressed: () {
+                  if (_counter < 3) {
+                    setState(
+                      () {
                         _counter += 1;
-                      });
-                    } else {
-                      // Navigator.of(context).push(MaterialPageRoute(
-                      //     builder: (context) => Experience_Pg5()));
-                    }
-                  },
-                  child: Text(
-                    'Next',
-                    style: TextStyle(color: Colors.white),
-                  )),
+                      },
+                    );
+                  } else {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Navigationbar()));
+                  }
+                },
+                child: Text(
+                  'Next',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ),
           ],
         ),

@@ -22,11 +22,13 @@ class EventCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
 //--------------image block----------------------
-            Image(
-              image: AssetImage('assets/image/event.png'),
-              // height: 170,
-              width: MediaQuery.of(context).size.width,
-              fit: BoxFit.cover,
+            Expanded(
+              child: Image(
+                image: AssetImage('assets/image/event.png'),
+                // height: 170,
+                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.fill,
+              ),
             ),
 //---------text below picture---------------
             Row(

@@ -31,29 +31,35 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
                 fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),
           ),
 //--------------------------Doted stepbar---------------
+          SizedBox(height: 15,),
           Doted_stepbar(1),
+          SizedBox(height: 15,),
 //-------------------------Profile pic------------------
-          Stack(children: [
-            ClipRRect(
-              child: Image(image: AssetImage('assets/image/user-image.png')),
-            ),
-            Positioned(
+          Stack(
+            children: [
+              ClipRRect(
+                child: Image(image: AssetImage('assets/image/user-image.png')),
+              ),
+              Positioned(
                 bottom: 0,
                 right: 0,
                 child: Image(
                   image: AssetImage('assets/image/Vector.png'),
                   width: 30,
                   fit: BoxFit.cover,
-                )),
-            Positioned(
+                ),
+              ),
+              Positioned(
                 bottom: 3,
                 right: 3,
                 child: Icon(
                   Icons.edit_outlined,
                   size: 22,
                   color: Colors.white,
-                )),
-          ]),
+                ),
+              ),
+            ],
+          ),
           Text(
             'Name here',
             style: TextStyle(fontWeight: FontWeight.bold),
@@ -68,19 +74,21 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
 //  -------------------------textfields-------------------------
           TextFormField(
             decoration: InputDecoration(
-                hintText: 'Your Name',
-                hintStyle: TextStyle(color: Colors.grey),
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.transparent, width: 0),
+              hintText: 'Your Name',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
                 ),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                    ))),
+              ),
+            ),
             autovalidateMode: AutovalidateMode.onUserInteraction,
             validator: (value) {
               final pattern = ('[a-zA-Z]+([\s][a-zA-Z]+)*');
@@ -99,19 +107,21 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
           ),
           TextFormField(
             decoration: InputDecoration(
-                hintText: 'Father Name',
-                hintStyle: TextStyle(color: Colors.grey),
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.transparent, width: 0),
+              hintText: 'Father Name',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
                 ),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                    ))),
+              ),
+            ),
             autovalidateMode: AutovalidateMode.onUserInteraction,
             validator: (value) {
               final pattern = ('[a-zA-Z]+([\s][a-zA-Z]+)*');
@@ -130,19 +140,21 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
           ),
           TextFormField(
             decoration: InputDecoration(
-                hintText: 'Email',
-                hintStyle: TextStyle(color: Colors.grey),
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.transparent, width: 0),
+              hintText: 'Email',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
                 ),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                    ))),
+              ),
+            ),
             autovalidateMode: AutovalidateMode.onUserInteraction,
             validator: (value) {
               final pattern =
@@ -165,19 +177,21 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
           ),
           TextFormField(
             decoration: InputDecoration(
-                hintText: 'Phone',
-                hintStyle: TextStyle(color: Colors.grey),
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.transparent, width: 0),
+              hintText: 'Phone',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
                 ),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                    ))),
+              ),
+            ),
             keyboardType: TextInputType.number,
             validator: (value) {
               final regExp = RegExp('[0-9]');
@@ -217,12 +231,14 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
                   //   });
                 },
                 items: <String>['Male', 'Female', 'Other']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
+                    .map<DropdownMenuItem<String>>(
+                  (String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  },
+                ).toList(),
               ),
             ),
           ),
@@ -251,13 +267,15 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
                   //     dropdownValue = newValue;
                   //   });
                 },
-                items: <String>['Single', 'Married']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
+                items:
+                    <String>['Single', 'Married'].map<DropdownMenuItem<String>>(
+                  (String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  },
+                ).toList(),
               ),
             ),
           ),
@@ -273,14 +291,15 @@ class _Personalinfo_Pg4State extends State<Personalinfo_Pg4> {
               children: [
                 Text('Date of Birth'),
                 IconButton(
-                    icon: Icon(Icons.today),
-                    onPressed: () {
-                      showDatePicker(
-                          context: context,
-                          initialDate: DateTime(2005),
-                          firstDate: DateTime(2000),
-                          lastDate: DateTime.now());
-                    })
+                  icon: Icon(Icons.today),
+                  onPressed: () {
+                    showDatePicker(
+                        context: context,
+                        initialDate: DateTime(2005),
+                        firstDate: DateTime(2000),
+                        lastDate: DateTime.now());
+                  },
+                )
               ],
             ),
           ),

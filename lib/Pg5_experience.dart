@@ -37,22 +37,27 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
               )
             ],
           ),
+          SizedBox(height: 15,),
           Doted_stepbar(2),
+          SizedBox(height: 15,),
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Title',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+            decoration: InputDecoration(
+              hintText: 'Title',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
           SizedBox(
             height: 10,
           ),
@@ -81,12 +86,14 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
                 items: <String>[
                   'Permanent',
                   'internship',
-                ].map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
+                ].map<DropdownMenuItem<String>>(
+                  (String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  },
+                ).toList(),
               ),
             ),
           ),
@@ -94,38 +101,44 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
             height: 10,
           ),
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Company Name',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+            decoration: InputDecoration(
+              hintText: 'Company Name',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
           SizedBox(
             height: 10,
           ),
           TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Location',
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                      )))),
+            decoration: InputDecoration(
+              hintText: 'Location',
+              hintStyle: TextStyle(color: Colors.grey),
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(color: Colors.transparent, width: 0),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
+          ),
 //----------------------Date Picker---------------
           Row(
             children: [
@@ -142,14 +155,15 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
                     children: [
                       Text('Start Date'),
                       IconButton(
-                          icon: Icon(Icons.today),
-                          onPressed: () {
-                            showDatePicker(
-                                context: context,
-                                initialDate: DateTime(2005),
-                                firstDate: DateTime(2000),
-                                lastDate: DateTime.now());
-                          })
+                        icon: Icon(Icons.today),
+                        onPressed: () {
+                          showDatePicker(
+                              context: context,
+                              initialDate: DateTime(2005),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now());
+                        },
+                      )
                     ],
                   ),
                 ),
@@ -170,14 +184,15 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
                     children: [
                       Text('End Date'),
                       IconButton(
-                          icon: Icon(Icons.today),
-                          onPressed: () {
-                            showDatePicker(
-                                context: context,
-                                initialDate: DateTime(2005),
-                                firstDate: DateTime(2000),
-                                lastDate: DateTime.now());
-                          })
+                        icon: Icon(Icons.today),
+                        onPressed: () {
+                          showDatePicker(
+                              context: context,
+                              initialDate: DateTime(2005),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now());
+                        },
+                      )
                     ],
                   ),
                 ),
@@ -187,8 +202,8 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
           Theme(
             data: ThemeData(unselectedWidgetColor: Colors.red[800]),
             child: CheckboxListTile(
-            contentPadding: EdgeInsets.only(left:0),
-            // contentPadding: null,
+              contentPadding: EdgeInsets.only(left: 0),
+              // contentPadding: null,
               title: Text(
                 'I currently work in this role',
                 style: TextStyle(color: Colors.grey),
@@ -196,9 +211,11 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
               value: _iscchecked,
               activeColor: Colors.green,
               onChanged: (bool value) {
-                setState(() {
-                  _iscchecked = value;
-                });
+                setState(
+                  () {
+                    _iscchecked = value;
+                  },
+                );
               },
               controlAffinity: ListTileControlAffinity.leading,
             ),
@@ -209,17 +226,19 @@ class _Experience_Pg5State extends State<Experience_Pg5> {
           TextFormField(
             maxLines: 5,
             decoration: InputDecoration(
-                hintText: 'Discription',
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.transparent)),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                    ))),
+              hintText: 'Discription',
+              filled: true,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.transparent)),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                ),
+              ),
+            ),
           ),
 //------------------------Buttons------------------------
           // TextButton(

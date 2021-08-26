@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:retask_1/AnnouncementCard.dart';
-import 'package:retask_1/BirthdayCard.dart';
-import 'package:retask_1/EventCard.dart';
-import 'package:retask_1/LeaveCard.dart';
-import 'package:retask_1/LinearProgressBar.dart';
-import 'package:retask_1/Pg19_HomePage.dart';
+import 'Pg1_signin.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,12 +14,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.white,
+        accentColor: Colors.red
         // primarySwatch: Colors.blue,
       ),
-      // home: Signin_Pg1(),
-      home: Pg19_HomePage(),
+      home: Signin_Pg1(),
+      // home: Pg19_HomePage(),
     );
   }
 }
-
-//-sacn-ajkscnjahcashn
